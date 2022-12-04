@@ -9,9 +9,8 @@ public class Principal{
 		boadilla.setNombre("Boadilla");
 		boadilla.setNumeroDeHabitantes(20000);*/
 
-		Localidad alcorcon = new Localidad();
-		alcorcon.setNombre("Alcorcon");
-		alcorcon.setNumeroDeHabitantes(100);
+		Localidad alcorcon = new Localidad("alcolrcon", 1000);
+
 
 		Municipio madrid = new Municipio();
 		madrid.setNombre("Madrid");
@@ -21,6 +20,23 @@ public class Principal{
 		Provincia comunidadMadrid = new Provincia();
 		comunidadMadrid.setNombre("Comunidad de Madrid");
 		comunidadMadrid.addMunicipio(madrid);
-		System.out.println(comunidadMadrid);
+		//System.out.println(comunidadMadrid);
+
+		Localidad carcas = new Localidad("caracas", 1000000);
+		Localidad miranda = new Localidad("miranda", 200000);
+
+		Municipio granCaracas = new Municipio();
+		granCaracas.setNombre("Gran Caracas");
+		granCaracas.addLocalidad(carcas);
+		granCaracas.addLocalidad(miranda);
+		System.out.println(granCaracas);
+
+		/*Provincia dc = new Provincia();
+		dc.setNombre("Comunidad distrito capital");
+		dc.addMunicipio(granCaracas);
+
+		System.out.println(granCaracas);
+
+		*/
 	}
 }
